@@ -4,6 +4,8 @@ import android.app.Application;
 import org.reactnative.camera.RNCameraPackage;
 import org.pgsqlite.SQLitePluginPackage;
 import com.facebook.react.ReactApplication;
+import fr.greweb.reactnativeviewshot.RNViewShotPackage;
+import com.reactlibrary.RNSketchViewPackage;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
@@ -24,6 +26,8 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new RNViewShotPackage(),
+            new RNSketchViewPackage(),
           new RNCameraPackage(),
           new SQLitePluginPackage()
       );

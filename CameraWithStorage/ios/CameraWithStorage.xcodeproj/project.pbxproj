@@ -5,7 +5,6 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
 		00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
@@ -42,6 +41,8 @@
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
 		D69A9422B6B043689AD7B98A /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A3FFCD99C8D4780BB59A5A2 /* libsqlite3.0.tbd */; };
+		DFF6D77872734217B27CC1F8 /* libRNSketchView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 96F3090A42094EA4A87F7D02 /* libRNSketchView.a */; };
+		9FE02E4B18DE49AA93055298 /* libRNViewShot.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7079FD505E410193B460B3 /* libRNViewShot.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -365,6 +366,10 @@
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		993C5276E389473394338614 /* SQLite.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = SQLite.xcodeproj; path = "../node_modules/react-native-sqlite-storage/src/ios/SQLite.xcodeproj"; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
+		0BF959A4E4BB4E058A9475CA /* RNSketchView.xcodeproj */ = {isa = PBXFileReference; name = "RNSketchView.xcodeproj"; path = "../node_modules/react-native-sketch-view/ios/RNSketchView.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		96F3090A42094EA4A87F7D02 /* libRNSketchView.a */ = {isa = PBXFileReference; name = "libRNSketchView.a"; path = "libRNSketchView.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		E402FE35EF2F49FA9CD2C9E3 /* RNViewShot.xcodeproj */ = {isa = PBXFileReference; name = "RNViewShot.xcodeproj"; path = "../node_modules/react-native-view-shot/ios/RNViewShot.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		2D7079FD505E410193B460B3 /* libRNViewShot.a */ = {isa = PBXFileReference; name = "libRNViewShot.a"; path = "libRNViewShot.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -397,6 +402,8 @@
 				5AFF834420BDA46B00F5AA23 /* libRNCamera.a in Frameworks */,
 				04577358BD524CED86436B60 /* libSQLite.a in Frameworks */,
 				D69A9422B6B043689AD7B98A /* libsqlite3.0.tbd in Frameworks */,
+				DFF6D77872734217B27CC1F8 /* libRNSketchView.a in Frameworks */,
+				9FE02E4B18DE49AA93055298 /* libRNViewShot.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -610,6 +617,8 @@
 				00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */,
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
 				993C5276E389473394338614 /* SQLite.xcodeproj */,
+				0BF959A4E4BB4E058A9475CA /* RNSketchView.xcodeproj */,
+				E402FE35EF2F49FA9CD2C9E3 /* RNViewShot.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -1262,6 +1271,8 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -1270,6 +1281,11 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CameraWithStorage.app/CameraWithStorage";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)\..\node_modules\react-native-sketch-view\ios/**",
+					"$(SRCROOT)\..\node_modules\react-native-view-shot\ios",
+				);
 			};
 			name = Debug;
 		};
@@ -1286,6 +1302,8 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -1294,6 +1312,11 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CameraWithStorage.app/CameraWithStorage";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)\..\node_modules\react-native-sketch-view\ios/**",
+					"$(SRCROOT)\..\node_modules\react-native-view-shot\ios",
+				);
 			};
 			name = Release;
 		};
@@ -1317,6 +1340,11 @@
 				PROVISIONING_PROFILE = "6979080e-0fe4-4737-a1d3-3829e3c5f2c3";
 				PROVISIONING_PROFILE_SPECIFIER = DevWildCardProvisioningProfile;
 				VERSIONING_SYSTEM = "apple-generic";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)\..\node_modules\react-native-sketch-view\ios/**",
+					"$(SRCROOT)\..\node_modules\react-native-view-shot\ios",
+				);
 			};
 			name = Debug;
 		};
@@ -1338,6 +1366,11 @@
 				PRODUCT_NAME = CameraWithStorage;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				VERSIONING_SYSTEM = "apple-generic";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)\..\node_modules\react-native-sketch-view\ios/**",
+					"$(SRCROOT)\..\node_modules\react-native-view-shot\ios",
+				);
 			};
 			name = Release;
 		};
@@ -1358,6 +1391,8 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -1368,6 +1403,11 @@
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.2;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)\..\node_modules\react-native-sketch-view\ios/**",
+					"$(SRCROOT)\..\node_modules\react-native-view-shot\ios",
+				);
 			};
 			name = Debug;
 		};
@@ -1388,6 +1428,8 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -1398,6 +1440,11 @@
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.2;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)\..\node_modules\react-native-sketch-view\ios/**",
+					"$(SRCROOT)\..\node_modules\react-native-view-shot\ios",
+				);
 			};
 			name = Release;
 		};
@@ -1417,6 +1464,8 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -1427,6 +1476,11 @@
 				SDKROOT = appletvos;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CameraWithStorage-tvOS.app/CameraWithStorage-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)\..\node_modules\react-native-sketch-view\ios/**",
+					"$(SRCROOT)\..\node_modules\react-native-view-shot\ios",
+				);
 			};
 			name = Debug;
 		};
@@ -1446,6 +1500,8 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -1456,6 +1512,11 @@
 				SDKROOT = appletvos;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CameraWithStorage-tvOS.app/CameraWithStorage-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)\..\node_modules\react-native-sketch-view\ios/**",
+					"$(SRCROOT)\..\node_modules\react-native-view-shot\ios",
+				);
 			};
 			name = Release;
 		};
